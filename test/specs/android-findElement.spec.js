@@ -44,6 +44,7 @@ describe("Android element test", () => {
       "Preference",
       "Text",
       "Views",
+      "App/Alert Dialogs",
     ];
     const actualList = [];
     const textElements = await $$("android.widget.TextView");
