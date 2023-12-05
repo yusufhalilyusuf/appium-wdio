@@ -1,4 +1,4 @@
-const path = require ('node:path')
+const path = require ('path')
 
 
 
@@ -120,7 +120,7 @@ exports.config = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'jasmine',
+    framework: 'mocha',
     
     //
     // The number of times to retry the entire specfile when it fails as a whole

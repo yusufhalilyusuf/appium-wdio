@@ -1,5 +1,5 @@
 describe("Android element test", () => {
-  it("should find elements by accessibility id", async () => {
+  it.only("should find elements by accessibility id", async () => {
     const appOption = await $("~App");
     await appOption.click();
     const actionBar = await $("~Action Bar");
@@ -11,7 +11,7 @@ describe("Android element test", () => {
     await expect(firstElementWithSameClassname).toHaveText("API Demos");
   });
 
-  it.skip("find element by xpah", async () => {
+  it("find element by xpah", async () => {
     (
       await $('//android.widget.TextView[@content-desc="Alert Dialogs"]')
     ).click();
@@ -54,18 +54,19 @@ describe("Android element test", () => {
     await expect(actualList).toEqual(expectedList);
     // await $('android= new UiSelector().textContains("Alert")').click();
   });
-  it.only("should type text field", async () => {
+  it("should type text field", async () => {
     (await $('//android.widget.TextView[@content-desc="Views"]')).click();
-    (await $('//android.widget.TextView[@content-desc="Auto Complete"]'))
-      .click();
-      (
-        await $('//android.widget.TextView[@content-desc="1. Screen Top"]')
-      )
-      .click();
+    (
+      await $('//android.widget.TextView[@content-desc="Auto Complete"]')
+    ).click();
+    (
+      await $('//android.widget.TextView[@content-desc="1. Screen Top"]')
+    ).click();
     //    (await $('//android.widget.EditText[@resource-id="io.appium.android.apis:id/edit"]')).typ
-    const textField = await $('//android.widget.EditText[@resource-id="io.appium.android.apis:id/edit"]');
-    await textField.addValue('canada')
-    await expect(textField).toHaveText('canada')
-    
+    const textField = await $(
+      '//android.widget.EditText[@resource-id="io.appium.android.apis:id/edit"]'
+    );
+    await textField.addValue("canada");
+    await expect(textField).toHaveText("canada");
   });
 });
