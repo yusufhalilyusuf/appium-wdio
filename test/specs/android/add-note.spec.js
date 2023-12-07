@@ -1,9 +1,15 @@
+
+
 describe("ColorNote app", () => {
   it("should open the app", async () => {
     await $(
       '//android.widget.Button[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/btn_start_skip"]'
     ).click();
+
+    
+
     await expect($('//*[@text="Add note"]')).toExist();
+  
   });
   it("add note", async () => {
     await $(
