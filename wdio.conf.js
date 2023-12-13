@@ -26,7 +26,7 @@ exports.config = {
   //
   specs: [
     // './test/specs/**/android-n*.js'
-    "./test/specs/**/ios*.js",
+    "./test/specs/**/ios-todo*.js",
   ],
   // Patterns to exclude.
   exclude: [
@@ -70,19 +70,18 @@ exports.config = {
     //   "appium:autoGrantPermissions": true,
     // },
     {
-     
       platformName: "IOS", //appium:platformName
-      
-      "appium:deviceName": "iPhone 15 Pro",
+
+      "appium:deviceName": "iPhone 15 Pro Max",
       "appium:platformVersion": "17.0",
       "appium:automationName": "XCUITest",
-    
-      "appium:app": path.join(
-        process.cwd(),
-        "app/ios/UIKitCatalog.app"
-      ),
-      
-    }
+
+      "appium:app": path.join(process.cwd(), "app/ios/MVCTodo.app"),
+      //   "appium:autoLaunch": false, // to disable app relaunch on Appium session start
+    //   "appium:fullReset": true,
+      //   "appium:noReset": true,
+    //   "appium:dontStopAppOnReset": true, // to prevent closing the app Appium Inspector's session stopped
+    },
   ],
 
   //
@@ -132,7 +131,17 @@ exports.config = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  services: ["appium"],
+  services: [
+    ['appium', {
+      command: 'appium',
+      args: {
+        // Appium server configuration for the first session on port 4723
+        address: '127.0.0.1',
+        port: 4723,
+        // Other relevant configurations for this session
+      },
+    }],
+  ],
 
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
