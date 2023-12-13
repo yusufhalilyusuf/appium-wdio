@@ -1,12 +1,13 @@
 
 const { config } = require("./wdio.conf");
+require('dotenv').config()
 
 //
 // ============
 // Browserstack
 // ============
-config.user = "yusufyusuf_qpxCFP"
-config.key = "x4NoAY7Zh8oKnApQSFrg"
+config.user = process.env.BROWSERSTACK_USER;
+config.key = process.env.BROWSERSTACK_KEY;
 
 //
 // ============
