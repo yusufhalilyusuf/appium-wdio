@@ -35,5 +35,16 @@ config.capabilities = [
       "appium:autoGrantPermissions": true,
   }
 ]
+config.services= [
+  ['appium', {
+    command: 'appium',
+    args: {
+      // Appium server configuration for the first session on port 4723
+      address: '127.0.0.1',
+      port: 4723,
+      // Other relevant configurations for this session
+    },
+  }],
+]
 
 exports.config = config;
