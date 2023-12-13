@@ -1,5 +1,6 @@
 const ItemScreen = require("../../screenobjects/ios/item.screen");
-const ListScreen = require("../../screenobjects/ios/list.screen");
+// const ListScreen = require("../../screenobjects/ios/list.screen");
+import ListScreen from "../../screenobjects/ios/list.screen"
 
 describe("real app", () => {
   it.only("create toDoList and item ", async () => {
@@ -9,12 +10,13 @@ describe("real app", () => {
     );
     await $("~Create").click();
     await expect(await $("~something")).toExist();
-
+    
     
     await ListScreen.listNameField('something').click();
     await ItemScreen.createItem.click();
     await ItemScreen.titleField.addValue("first item");
     await ItemScreen.dueField.click();
+    await ItemScreen.dueField
     
     await browser.touchAction({
         action: "tap",
@@ -33,3 +35,5 @@ describe("real app", () => {
 
   });
 });
+
+desc

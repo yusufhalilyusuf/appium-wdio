@@ -12,4 +12,4 @@ class ListScreen{
    return  $(`~${name}`)
  } 
 }
-module.exports = new ListScreen();
+export default new ListScreen();
