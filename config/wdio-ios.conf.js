@@ -12,7 +12,7 @@ config.port = 4723;
 // Specs
 // ============
 config.specs = [
-    "./test/specs/**/ios-todo*.js",
+    "../test/specs/**/ios-todo*.js",
 ];
 
 //
