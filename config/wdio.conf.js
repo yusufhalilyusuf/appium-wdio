@@ -7,7 +7,7 @@ exports.config = {
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
   // runner: 'local',
-  port: 4723,
+  // port: 4723,
   //
   // ==================
   // Specify Test Files
@@ -24,10 +24,10 @@ exports.config = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //
-  specs: [
-    // './test/specs/**/android-n*.js'
-    "./test/specs/**/ios-todo*.js",
-  ],
+  // specs: [
+  //   // './test/specs/**/android-n*.js'
+  //   "./test/specs/**/ios-todo*.js",
+  // ],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -54,35 +54,35 @@ exports.config = {
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
   // https://saucelabs.com/platform/platform-configurator
   //
-  capabilities: [
-    // {
-    //   // capabilities for local Appium web tests on an Android Emulator
-    //   platformName: "Android", //appium:platformName
-    //   // 'appium:browserName': 'Chrome',   //appium:platform
-    //   "appium:deviceName": "Pixel 3",
-    //   "appium:platformVersion": "11.0",
-    //   "appium:automationName": "UiAutomator2",
-    //   // 'appium:app':path.join(process.cwd(),'/app/android/ApiDemos-debug.apk')
-    //   "appium:app": path.join(
-    //     process.cwd(),
-    //     "/app/android/ColorNote+Notepad.apk"
-    //   ),
-    //   "appium:autoGrantPermissions": true,
-    // },
-    {
-      platformName: "IOS", //appium:platformName
+  // capabilities: [
+  //   // {
+  //   //   // capabilities for local Appium web tests on an Android Emulator
+  //   //   platformName: "Android", //appium:platformName
+  //   //   // 'appium:browserName': 'Chrome',   //appium:platform
+  //   //   "appium:deviceName": "Pixel 3",
+  //   //   "appium:platformVersion": "11.0",
+  //   //   "appium:automationName": "UiAutomator2",
+  //   //   // 'appium:app':path.join(process.cwd(),'/app/android/ApiDemos-debug.apk')
+  //   //   "appium:app": path.join(
+  //   //     process.cwd(),
+  //   //     "/app/android/ColorNote+Notepad.apk"
+  //   //   ),
+  //   //   "appium:autoGrantPermissions": true,
+  //   // },
+  //   {
+  //     platformName: "IOS", //appium:platformName
 
-      "appium:deviceName": "iPhone 15 Pro Max",
-      "appium:platformVersion": "17.0",
-      "appium:automationName": "XCUITest",
+  //     "appium:deviceName": "iPhone 15 Pro Max",
+  //     "appium:platformVersion": "17.0",
+  //     "appium:automationName": "XCUITest",
 
-      "appium:app": path.join(process.cwd(), "app/ios/MVCTodo.app"),
-      //   "appium:autoLaunch": false, // to disable app relaunch on Appium session start
-    //   "appium:fullReset": true,
-      //   "appium:noReset": true,
-    //   "appium:dontStopAppOnReset": true, // to prevent closing the app Appium Inspector's session stopped
-    },
-  ],
+  //     "appium:app": path.join(process.cwd(), "app/ios/MVCTodo.app"),
+  //     //   "appium:autoLaunch": false, // to disable app relaunch on Appium session start
+  //   //   "appium:fullReset": true,
+  //     //   "appium:noReset": true,
+  //   //   "appium:dontStopAppOnReset": true, // to prevent closing the app Appium Inspector's session stopped
+  //   },
+  // ],
 
   //
   // ===================
