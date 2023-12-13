@@ -9,6 +9,7 @@ describe("real app", () => {
       "something"
     );
     await $("~Create").click();
+    
     await expect(await $("~something")).toExist();
     
     
@@ -36,4 +37,3 @@ describe("real app", () => {
   });
 });
 
-desc
