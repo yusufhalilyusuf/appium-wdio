@@ -6,6 +6,7 @@
         "@babel/preset-env": "^7.23.6",
         "@babel/register": "^7.22.15",
         "@types/mocha": "^10.0.6",
+        "@wdio/allure-reporter": "^8.24.12",
         "@wdio/appium-service": "^8.24.2",
         "@wdio/browserstack-service": "^8.26.1",
         "@wdio/cli": "^8.24.6",
@@ -24,6 +25,7 @@
         "wdio": "wdio run wdio.conf.js"
     },
     "dependencies": {
+        "allure-commandline": "^2.25.0",
         "dotenv": "^16.3.1"
     }
 }
