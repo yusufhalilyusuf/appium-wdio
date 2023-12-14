@@ -12,7 +12,7 @@ config.port = 4723;
 // Specs
 // ============
 config.specs = [
-    "../test/specs/android/delete-note-screen.spec.js",
+    "../test/specs/android/webview.spec.js",
 ];
 
 //
@@ -42,7 +42,10 @@ config.services= [
       // Appium server configuration for the first session on port 4723
       address: '127.0.0.1',
       port: 4723,
+      //this is for chrome webview installation
+      relaxedSecurity:true
       // Other relevant configurations for this session
+      
     },
   }],
 ]
