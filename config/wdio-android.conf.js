@@ -40,7 +40,7 @@ config.services= [
     command: 'appium',
     args: {
       // Appium server configuration for the first session on port 4723
-      address: '127.0.0.1',
+      address: 'localhost',
       port: 4723,
       //this is for chrome webview installation
       relaxedSecurity:true
